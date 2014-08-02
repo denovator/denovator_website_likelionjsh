@@ -6,6 +6,7 @@ from google.appengine.ext import db
 class FirstClass(db.Model):
     fuckingTextFunction = db.StringProperty()
     fuckingLike = db.IntegerProperty()
+
     def setText(self, text):
         self.fuckingTextFunction = text
 
@@ -13,9 +14,9 @@ class FirstClass(db.Model):
         return self.fuckingTextFunction
 
     def setLike(self, like):
-    	self.fuckingLike = like
+        self.fuckingLike = like
 
     def getLike(self):
-    	return self.fuckingLike
+        return self.fuckingLike
 
-    def 
+    # def
