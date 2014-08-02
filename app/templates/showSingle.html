@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>사진 정보</title>
+</head>
+<body>
+	{% if photoInfo %}
+    <div>
+        <img src="{{ photoInfo['imageUrl'] }}"/>
+    </div>
+	<div>
+		{% for key in photoInfo['exif'] %}
+		<p>{{ key }} : {{ photoInfo['exif'][key] }}</p>
+		{% endfor %}
+	</div>
+	{% else %}
+	<div>
+		<h1>No Photo</h1>
+	</div>
+	{% endif %}
+</body>
+</html>

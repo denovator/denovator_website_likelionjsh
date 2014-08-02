@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>showAll</title>
+</head>
+<body>
+	{% for photoInfo in photoInfos %}
+	<div>
+		<div>
+			<img src="{{ photoInfo['imageUrl'] }}" />
+		</div>
+		<div>
+			{% for key in photoInfo['exif'] %}
+			<p>{{ key }} : {{ photoInfo['exif'][key] }}</p>
+			{% endfor %}
+		</div>
+	</div>
+	{% endfor %}
+</body>
+</html>
